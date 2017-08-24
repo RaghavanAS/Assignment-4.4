@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <title>Assignment on Div,image,Hover and Animation Effects</title>
+        <!-- HTML5 shim for IE8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+      <script src=“https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js”></script>
+    <![endif]-->
+<style type="text/css">
+/* Adding background linear gradient to body */
+body{
+	background: -webkit-linear-gradient(white, yellow);
+    background: -o-linear-gradient(white, yellow);
+    background: -moz-linear-gradient(white, yellow);
+    background: linear-gradient(white, yellow);	
+}
+/*positioning div element and adding transition property */
+#parentDiv{
+	position: relative;
+	height: 300px;
+	width: 650px;
+	background-color: black;
+	left: 25%;
+	top: 10%;
+}
+/* adding styles to image and animating it from left to right*/
+img{
+	position: absolute;
+	height: 100px;
+	width: 150px;
+	float: left;
+	bottom: 0px;
+	-webkit-animation-name: movement; /* Safari 4.0 - 8.0 */
+	-webkit-animation-duration: 5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    /* Standard syntax */
+    animation-name: movement;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+ /*   animation-direction: alternate;*/
+}
+/* working with keyframes to animate based on the duration percentage */
+@keyframes movement{
+     0%  { left:0px;}
+    20%  { left:100px;}
+    40%  { left:200px;}
+    60%  { left:300px;}
+    80%  { left:400px;}
+    100% { left:500px;}
+}
+
+</style>
+</head>
+<body>
+<header>
+<center><h1 style="color: black">A Simple Animation </h1></center>
+</header>
+<!-- main section -->
+<main id="mainSection">
+<section id="firstSection">
+<!-- div element with an image-->
+<div id="parentDiv" class="divSquare">
+<img src="Bicycle.png" alt="coloredBackground" id="divImage">
+</div>
+</section>
+</main>	
+<!-- main section ends -->
+</body>
+<!-- end of body -->
+</html>
+<!-- end of html -->
